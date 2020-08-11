@@ -1,6 +1,6 @@
 import random
 
-def Menu():#This is a
+def Menu():     #This is a Function. It will be used here to print menu and decide what choice to pick
     PlayerChoice = 0
     print("Menu\n1. Human Vs Human\n2. Human vs Computer\n3. Exit")
 
@@ -14,7 +14,7 @@ def Menu():#This is a
     else:
         return
 
-def PlayAgain(GameMode):
+def PlayAgain(GameMode):            #When game ends this function is called to see if player feels like playing more
     PlayAgainAnswer = input("Would you like to play again? (Y/N)").capitalize()
 
     if(PlayAgainAnswer == "Y" and GameMode == "PvP"):
@@ -27,7 +27,7 @@ def PlayAgain(GameMode):
         print(Menu())
 
 
-def WinnerDecider(PlayerOne, PlayerTwo):
+def WinnerDecider(PlayerOne, PlayerTwo):    #Decides who won the Rock Paper Scissor Game
     if PlayerOne == "Rock":
         if PlayerTwo == "Rock":
             Winner = "Draw"
@@ -52,7 +52,7 @@ def WinnerDecider(PlayerOne, PlayerTwo):
 
     return Winner
 
-def PvPGame():
+def PvPGame():              #Rules for the Player vs Player Game
     GameMode = "PvP"
     RPS = ["Rock", "Paper", "Scissor"]
     PlayerOne = 999
@@ -73,7 +73,7 @@ def PvPGame():
         print(Winner, "is the big daddy grandmaster champion\n")
         PlayAgain(GameMode)
 
-def PvCGame():
+def PvCGame():                 #Player vs Computer Game. Notice the differeneces between the PvP Game and this function
     GameMode = "PvC"
     RPS = ["Rock", "Paper", "Scissor"]
     PlayerOne = 999
@@ -93,7 +93,7 @@ def PvCGame():
         print(Winner, "is the big daddy grandmaster champion\n")
         PlayAgain(GameMode)
 
-def main():
+def main():        #This is my main. This is where I use the functions I wrote above. I start with call to menu function
     Menu()
 
-main()
+main()          #This is my call to function main().
